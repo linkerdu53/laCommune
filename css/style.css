@@ -1,5 +1,14 @@
- h1 {
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 1em;
+}
+.index_presentation {
    text-align: center;
    vertical-align: middle;
+   font-size: 30px;
+   margin-top: 10px;
 
  }
