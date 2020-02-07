@@ -21,7 +21,7 @@ body
 {
     -webkit-animation: AnimationAttente 30s; /* Safari, Opera, Chrome */
     animation: AnimationAttente 30s;
-    background: linear-gradient(89deg, #1a056f, #a10400);
+    background: linear-gradient(89deg, #a10400, #1a056f);
     background-size: 400% 400%;
 }
 .index_presentation {
