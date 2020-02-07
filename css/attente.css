@@ -1,0 +1,56 @@
+
+
+-webkit-animation: AnimationAttente 0s ease infinite;
+-moz-animation: AnimationAttente 0s ease infinite;
+animation: AnimationAttente 0s ease infinite;
+
+@-webkit-keyframes AnimationAttente {
+    0%{background-position:0% 51%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 51%}
+}
+@-moz-keyframes AnimationAttente {
+    0%{background-position:0% 51%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 51%}
+}
+@keyframes AnimationAttente {
+    0%{background-position:0% 51%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 51%}
+}
+body
+{
+    position: relative;
+    -webkit-animation: AnimationAttente 30s; /* Safari, Opera, Chrome */
+    animation: AnimationAttente 30s;
+    background: linear-gradient(89deg, #1a056f, #a10400);
+    background-size: 400% 400%;
+    height: auto;
+    width: auto;
+
+
+}
+
+.index_presentation {
+   color: white;
+   text-align: center;
+   font-size: 30px;
+   margin-top: 10px;
+
+ }
+ footer{
+   bottom: 0px;
+   margin: auto;
+   text-align: center;
+   position: absolute;
+   width: 100%;
+
+ }
+
+ .lienTel{
+   color: white;
+ }
+ .lienTel:hover{
+   color: white;
+ }
