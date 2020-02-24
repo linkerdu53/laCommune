@@ -1,0 +1,35 @@
+header{
+    background: linear-gradient(#a10400, #1a056f);
+    height: 100px;
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}
+
+.flex{
+   display: flex;
+}
+
+.titre{
+   width: 1000px;
+   margin-top: 20px;
+   margin-left: 0%;
+   display: inline-block;
+   font-size: 1.25em;
+}
+
+.cercle_header{
+   padding-left: 20px;
+   padding-top: 15px;
+   margin-left: 4%;
+   margin-right: 10px;
+   margin-top: 5px;
+   text-align: left;
+   font-size: 18px;
+   border-radius: 100px;
+   height: 70px;
+   width: 120px;
+   background-color: rgba(161, 4, 0, 0.20);
+   display: inline-block;
+}
