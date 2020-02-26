@@ -1,0 +1,35 @@
+.containerDefil {
+    width: 18em;
+    height: 8em;
+    margin: 1em auto;
+    overflow: hidden;
+    background: white;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.marquee {
+    top: 6em;
+    position: relative;
+    box-sizing: border-box;
+    /*animation: animVert 15s linear infinite;*/
+}
+  .defilementVertical{
+    animation: animVert 15s linear infinite;
+  }
+  .arretDefil{
+    animation-play-state: paused;
+  }
+  .playDefil{
+    animation-play-state: running;
+  }
+/*
+.marquee:hover {
+    animation-play-state: paused;
+}*/
+
+/* Make it move! */
+@keyframes animVert {
+    0%   { top:   8em }
+    100% { top: -11em }
+}

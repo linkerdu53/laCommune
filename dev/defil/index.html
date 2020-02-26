@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr" >
+  <head>
+    <meta charset="utf-8">
+    <title>defil</title>
+    <link rel="stylesheet" href="./css/defilText.css">
+  </head>
+  <body>
+
+
+    <div class="containerDefil">
+      <p class="marquee">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+    </div>
+    <button class='toggleButton' value='play'>Play</button>
+
+
+
+  </body>
+
+  <script type="text/javascript" src="./js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript">
+      $defil = $('.marquee:eq(0)');
+      $('.toggleButton:eq(0)').on('click', function() {
+          $defil.addClass('defilementVertical');
+          $defil.addClass('playDefil');
+          $defil.addClass('arretDefil');
+        if($(this).html() === 'Play')
+        {
+          $(this).html('Pause');
+          $defil.removeClass('arretDefil');
+          $defil.addClass('playDefil');
+        } else {
+          $(this).html('Play');
+          $defil.removeClass('playDefil');
+          $defil.addClass('arretDefil');
+
+        }
+      });
+  </script>
+
+</html>
