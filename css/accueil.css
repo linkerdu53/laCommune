@@ -33,3 +33,19 @@ header{
    background-color: rgba(161, 4, 0, 0.20);
    display: inline-block;
 }
+.Fond{
+   display: flex
+}
+.commun{
+   width: 100%;
+   height: 100%;
+   display: inline-block;
+}
+#imgcom:hover{
+   background-image: url(./img/communards2.png)
+}
+#gouver{
+   width: 100%;
+   height: 100%;
+   display: inline-block;
+}
