@@ -6,20 +6,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" sizes="128x128" href="./img/favicon/favicon128x128.png">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/headerCommunard.css">
+  <link rel="stylesheet" href="./css/communardLouise.css">
+  <link href="./css/defilText.css" rel="stylesheet" type="text/css">
 
 </head>
 <body>
 
   <!-- header -->
-  <header>
-    <h1>Prochainement le site Sur la commune de Paris de 1871.</h1>
+  <header class="flex">
+    <a class="cercle_header" >La Commune Paris 1871</a>
+    <h1 class="titre" >Une Vie De Communards</h1>
   </header>
+  <section>
+    <img class="fondRouge" src="./img/communard/photoLouiseMichel.png" alt="image de louise Michel portrait">
+    <article class="contPapierAgrand">
+
+        <img class="papierAgrand" src="./img/texture/papierAncNC.png" alt="texture de papier agrandie">
 
 
+        <div class="col_1-2">
+            <img class="imageRevLouise" src="./img/communard/profLouise3.png" alt="" >
+            <div class="col_1">
+              <img class="imageRevLouise" src="./img/communard/profLouise1.png" alt="" >
+            </div>
+            <div class="col_2">
+              <img class="imageRevLouise" src="./img/communard/profLouise2.png" alt="" >
+            </div>
+        </div>
+        <div class="col_3-3">
+            <p class="texteArticle"><div id="mp3_player">
+              <button type="button" name="button" id="lance">Analyser Audio</button>
+              <div id="audio_box"></div>
+              <canvas id="analyser_render"></canvas>
+            </div>
+
+            <div class="containerDefil">
+              <p class="marquee">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            </div>
+            <button class='toggleButton' value='play'>Play</button>
+        </div>
+    </article>
+  </section>
 
   <!-- footer -->
   <footer>
 
   </footer>
+  <script type="text/javascript" src="./js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="./js/esio.js"></script>
+  <script type="text/javascript" src="./js/pausePlay.js"></script></p>
 </body>
 </html>

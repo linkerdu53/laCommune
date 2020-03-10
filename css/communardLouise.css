@@ -87,8 +87,8 @@
   margin-bottom: 5px;
 }
 .texteArticle{
-  z-index: 2;
   text-align: justify;
+  z-index: 2;
   position: relative;
   padding-left: 2%;
   padding-right: 2%;
@@ -141,5 +141,11 @@
   margin-left: 2%;
 /*  border: 1px solid black; pour savoir la taille de la boite*/
 
+}
 
+.imageRevLouise{
+  margin-top: 15px;
+  margin-left: 2%;
+  width: 96%;
+  height: auto;
 }
