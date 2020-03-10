@@ -52,42 +52,39 @@ header{
 
 /* ----------- communards.html --------------------- */
 
-.journal{
-   margin: 20px;
-   width: 120px;
+.journal #im{
+   position: absolute;
+   margin-top: 100px;
    height: 120px;
-   background-color: #a18900;
-   transition : width, height ;
    transition-timing-function: linear;
    transition-duration :1s;
-   -ms-transform: rotate(20deg); /* IE 9 */
+   -ms-transform: rotate(80deg); /* IE 9 */
    transform: rotate(20deg);
 }
-.journal:hover{
+.journal #im:hover{
    margin-left: 80px;
-   width: 1080px;
-   height: 1080px;
+   width: 600px;
+   height: 800px;
    -ms-transform: rotate(0deg); /* IE 9 */
    transform: rotate(0deg);
 }
 
 /* ----------- gouvernement.html --------------------- */
 
-.journal{
-   margin: 20px;
-   width: 150px;
-   height: 150px;
-   background-color: #a18900;
-   transition : width, height ;
+.journalDeux #imDeux{
+   position: absolute;
+   margin-left: 200px;
+   margin-top: 100px;
+   height: 120px;
    transition-timing-function: linear;
    transition-duration :1s;
-   -ms-transform: rotate(20deg); /* IE 9 */
+   -ms-transform: rotate(80deg); /* IE 9 */
    transform: rotate(20deg);
 }
-.journal:hover{
+.journalDeux #imDeux:hover{
    margin-left: 80px;
-   width: 1080px;
-   height: 1080px;
+   width: 600px;
+   height: 800px;
    -ms-transform: rotate(0deg); /* IE 9 */
    transform: rotate(0deg);
 }

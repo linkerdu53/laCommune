@@ -9,21 +9,26 @@
   <link rel="stylesheet" href="./css/accueil.css">
 
 <!-----------scripts 1------------------------------------------------->
+<script>
+	// change the default namespace for the CreateJS libraries:
+	var createjsGouv = createjsGouv||{};
+	var createjs = createjsGouv;
+</script>
 <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
-<script src="gouv.js?1583791111630"></script>
+<script src="gouv.js?1583834644701"></script>
 <script>
 var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
-function initG() {
+function init() {
 	canvas = document.getElementById("canvasG");
 	anim_container = document.getElementById("animation_containerG");
 	dom_overlay_container = document.getElementById("dom_overlay_containerG");
 	var comp=AdobeAn.getComposition("62F65144A56FC34E967856508F916E16");
-	var lib=comp.getLibrary();
-	var loader = new createjs.LoadQueue(false);
+	var libGouv=comp.getLibrary();
+	var loader = new createjsGouv.LoadQueue(false);
 	loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
 	loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
-	var lib=comp.getLibrary();
-	loader.loadManifest(lib.properties.manifest);
+	var libGouv=comp.getLibrary();
+	loader.loadManifest(libGouv.properties.manifest);
 }
 function handleFileLoad(evt, comp) {
 	var images=comp.getImages();	
@@ -31,38 +36,37 @@ function handleFileLoad(evt, comp) {
 }
 function handleComplete(evt,comp) {
 	//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
-	var lib=comp.getLibrary();
+	var libGouv=comp.getLibrary();
 	var ss=comp.getSpriteSheet();
 	var queue = evt.target;
-	var ssMetadata = lib.ssMetadata;
+	var ssMetadata = libGouv.ssMetadata;
 	for(i=0; i<ssMetadata.length; i++) {
 		ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
 	}
-	exportRoot = new lib.gouv();
-	stage = new lib.Stage(canvas);	
+	exportRoot = new libGouv.gouv();
+	stage = new libGouv.Stage(canvas);	
 	//Registers the "tick" event listener.
 	fnStartAnimation = function() {
 		stage.addChild(exportRoot);
-		createjs.Ticker.framerate = lib.properties.fps;
-		createjs.Ticker.addEventListener("tick", stage);
+		createjsGouv.Ticker.framerate = libGouv.properties.fps;
+		createjsGouv.Ticker.addEventListener("tick", stage);
 	}	    
 	//Code to support hidpi screens and responsive scaling.
 	AdobeAn.makeResponsive(false,'both',false,1,[canvas,anim_container,dom_overlay_container]);	
-	AdobeAn.compositionLoaded(lib.properties.id);
+	AdobeAn.compositionLoaded(libGouv.properties.id);
 	fnStartAnimation();
 }
 </script>
 <!------------------------------------------------------------->
-
 <!----------Scripts 2------------------------------------------>
 <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
 <script src="com.js?1583778405448"></script>
 <script>
 var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
 function init() {
-	canvas = document.getElementById("canvas");
+	canvas = document.getElementById("canvasJ");
 	anim_container = document.getElementById("animation_containerJ");
-	dom_overlay_container = document.getElementById("dom_overlay_container");
+	dom_overlay_container = document.getElementById("dom_overlay_containerJ");
 	var comp=AdobeAn.getComposition("CEC8651DAB923D45BE632E16982CCE9F");
 	var lib=comp.getLibrary();
 	var loader = new createjs.LoadQueue(false);
@@ -99,6 +103,7 @@ function handleComplete(evt,comp) {
 }
 </script>
 <!------------------------------------------------------------->
+
 </head>
 <body onload="init();" onload="initG();" style="margin:0px;">
 
@@ -112,18 +117,22 @@ function handleComplete(evt,comp) {
     <!--<div class="commun">
         <a href="./communards.html"> <img onmouseout="this.src='./img/communards.jpg';" onmouseover="this.src='./img/communards2.png';" src="./img/communards.jpg"></onmouseout></a>
 	</div>-->
-	<div id="animation_containerJ">
-		<a href="./communards.html">
-		<canvas id="canvas" width="725" height="661" style="display:inline-block ; background-color:rgba(255, 255, 255, 1.00);"></canvas>
-		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:725px; height:661px; position: absolute; left: 0px; top: 0px; display: inline-block;">
-		</div></a>
-	</div>
+	<div id="animation_containerJ" class="commu">
+		<a class="journal" href="./communards.html">
+			<img id="im" src="./img/leCriDuPeuple.png" width="80px" height="123px">
+		<canvas id="canvasJ" width="725" height="661" style="display:inline-block ; background-color:rgba(255, 255, 255, 1.00);"></canvas>
+		<div id="dom_overlay_containerJ" style="pointer-events:none; overflow:hidden; width:725px; height:661px; position: absolute; left: 0px; top: 0px; display: inline-block;">
+		</div>
+	</a>
+		</div>
 	
     <div id="animation_containerG">
-		<a href="./gouvernement.html">
+		<a class="journalDeux" href="./gouvernement.html">
+			<img id="imDeux" src="./img/journalOfficiel.png" width="80px" height="123px">
 		<canvas id="canvasG" width="725" height="661" style="display: inline-block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
 		<div id="dom_overlay_containerG" style="pointer-events:none; overflow:hidden; width:725px; height:661px; position: absolute; right: 0px; top: 0px; display: inline-block;">
-		</div></a>
+		</div>
+	</a>
 	</div>
     <!--
     <div id="gouver">

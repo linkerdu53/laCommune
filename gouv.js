@@ -119,7 +119,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/gouv_atlas_.png?1583791111499", id:"gouv_atlas_"}
+		{src:"images/gouv_atlas_.png?1583834644609", id:"gouv_atlas_"}
 	],
 	preloads: []
 };
@@ -215,5 +215,5 @@ an.makeResponsive = function(isResp, respDim, isScale, scaleType, domContainers)
 }
 
 
-})(createjs = createjs||{}, AdobeAn = AdobeAn||{});
-var createjs, AdobeAn;
+})(createjsGouv = createjsGouv||{}, AdobeAn = AdobeAn||{});
+var createjsGouv, AdobeAn;
