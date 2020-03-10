@@ -7,11 +7,100 @@
   <link rel="icon" type="image/png" sizes="128x128" href="./img/favicon/favicon128x128.png">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/accueil.css">
-<!-----------scripts------------------------------------------------->
 
+<!-----------scripts 1------------------------------------------------->
+<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+<script src="gouv.js?1583791111630"></script>
+<script>
+var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+function initG() {
+	canvas = document.getElementById("canvasG");
+	anim_container = document.getElementById("animation_containerG");
+	dom_overlay_container = document.getElementById("dom_overlay_containerG");
+	var comp=AdobeAn.getComposition("62F65144A56FC34E967856508F916E16");
+	var lib=comp.getLibrary();
+	var loader = new createjs.LoadQueue(false);
+	loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
+	loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
+	var lib=comp.getLibrary();
+	loader.loadManifest(lib.properties.manifest);
+}
+function handleFileLoad(evt, comp) {
+	var images=comp.getImages();	
+	if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }	
+}
+function handleComplete(evt,comp) {
+	//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+	var lib=comp.getLibrary();
+	var ss=comp.getSpriteSheet();
+	var queue = evt.target;
+	var ssMetadata = lib.ssMetadata;
+	for(i=0; i<ssMetadata.length; i++) {
+		ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
+	}
+	exportRoot = new lib.gouv();
+	stage = new lib.Stage(canvas);	
+	//Registers the "tick" event listener.
+	fnStartAnimation = function() {
+		stage.addChild(exportRoot);
+		createjs.Ticker.framerate = lib.properties.fps;
+		createjs.Ticker.addEventListener("tick", stage);
+	}	    
+	//Code to support hidpi screens and responsive scaling.
+	AdobeAn.makeResponsive(false,'both',false,1,[canvas,anim_container,dom_overlay_container]);	
+	AdobeAn.compositionLoaded(lib.properties.id);
+	fnStartAnimation();
+}
+</script>
+<!------------------------------------------------------------->
+
+<!----------Scripts 2------------------------------------------>
+<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+<script src="com.js?1583778405448"></script>
+<script>
+var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+function init() {
+	canvas = document.getElementById("canvas");
+	anim_container = document.getElementById("animation_containerJ");
+	dom_overlay_container = document.getElementById("dom_overlay_container");
+	var comp=AdobeAn.getComposition("CEC8651DAB923D45BE632E16982CCE9F");
+	var lib=comp.getLibrary();
+	var loader = new createjs.LoadQueue(false);
+	loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
+	loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
+	var lib=comp.getLibrary();
+	loader.loadManifest(lib.properties.manifest);
+}
+function handleFileLoad(evt, comp) {
+	var images=comp.getImages();	
+	if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }	
+}
+function handleComplete(evt,comp) {
+	//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+	var lib=comp.getLibrary();
+	var ss=comp.getSpriteSheet();
+	var queue = evt.target;
+	var ssMetadata = lib.ssMetadata;
+	for(i=0; i<ssMetadata.length; i++) {
+		ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
+	}
+	exportRoot = new lib.com();
+	stage = new lib.Stage(canvas);	
+	//Registers the "tick" event listener.
+	fnStartAnimation = function() {
+		stage.addChild(exportRoot);
+		createjs.Ticker.framerate = lib.properties.fps;
+		createjs.Ticker.addEventListener("tick", stage);
+	}	    
+	//Code to support hidpi screens and responsive scaling.
+	AdobeAn.makeResponsive(false,'both',false,1,[canvas,anim_container,dom_overlay_container]);	
+	AdobeAn.compositionLoaded(lib.properties.id);
+	fnStartAnimation();
+}
+</script>
 <!------------------------------------------------------------->
 </head>
-<body>
+<body onload="init();" onload="initG();" style="margin:0px;">
 
   <!-- header -->
   <header class="flex" >
@@ -20,16 +109,27 @@
   </header>
 
   <div class="Fond">
-      <div class="commun">
-          <a href="./communards.html"> <img onmouseout="this.src='./img/communards.jpg';" onmouseover="this.src='./img/communards2.png';" src="./img/communards.jpg"></onmouseout></a>
-      </div>
-      <div id="gouver">
-          <a href="./gouvernement.html"> <img onmouseout="this.src='./img/gouvernement.jpg';" onmouseover="this.src='./img/gouv2.png';" src="./img/gouvernement.jpg"></onmouseout></a>
-      </div>
-      
-  </div>
-
-
+    <!--<div class="commun">
+        <a href="./communards.html"> <img onmouseout="this.src='./img/communards.jpg';" onmouseover="this.src='./img/communards2.png';" src="./img/communards.jpg"></onmouseout></a>
+	</div>-->
+	<div id="animation_containerJ">
+		<a href="./communards.html">
+		<canvas id="canvas" width="725" height="661" style="display:inline-block ; background-color:rgba(255, 255, 255, 1.00);"></canvas>
+		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:725px; height:661px; position: absolute; left: 0px; top: 0px; display: inline-block;">
+		</div></a>
+	</div>
+	
+    <div id="animation_containerG">
+		<a href="./gouvernement.html">
+		<canvas id="canvasG" width="725" height="661" style="display: inline-block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
+		<div id="dom_overlay_containerG" style="pointer-events:none; overflow:hidden; width:725px; height:661px; position: absolute; right: 0px; top: 0px; display: inline-block;">
+		</div></a>
+	</div>
+    <!--
+    <div id="gouver">
+        <a href="./gouvernement.html"> <img onmouseout="this.src='./img/gouvernement.jpg';" onmouseover="this.src='./img/gouv2.png';" src="./img/gouvernement.jpg"></onmouseout></a>
+    </div>-->
+</div>
 
   <!-- footer -->
   <footer>
