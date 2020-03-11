@@ -49,3 +49,43 @@ header{
    height: 100%;
    display: inline-block;
 }
+
+/* ----------- communards.html --------------------- */
+
+.journal #im{
+   position: absolute;
+   margin-top: 25px;
+   margin-left: 625px;
+   height: 120px;
+   transition-timing-function: linear;
+   transition-duration :1s;
+  /* -ms-transform: rotate(80deg); /* IE 9 
+   transform: rotate(20deg);*/
+}
+.journal #im:hover{
+   margin-left: 80px;
+   width: 600px;
+   height: 800px;
+ /* -ms-transform: rotate(0deg); /* IE 9 
+   transform: rotate(0deg);*/
+}
+
+/* ----------- gouvernement.html --------------------- */
+
+.journalDeux #imDeux{
+   position: absolute;
+   margin-left: 25px;
+   margin-top: 25px;
+   height: 120px;
+   transition-timing-function: linear;
+   transition-duration :1s;
+  /* -ms-transform: rotate(80deg); /* IE 9 
+   transform: rotate(20deg);*/
+}
+.journalDeux #imDeux:hover{
+   margin-left: 80px;
+   width: 600px;
+   height: 800px;
+  /* -ms-transform: rotate(0deg); /* IE 9 
+   transform: rotate(0deg);*/
+}
