@@ -66,60 +66,60 @@ lib.ssMetadata = [
 
 	// homme_fou
 	this.instance = new lib.hommefou();
-	this.instance.setTransform(8,328,0.7251,0.6077);
+	this.instance.setTransform(9,441,0.9455,0.7925);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(5).to({scaleX:0.7622,scaleY:0.5458,rotation:4.475,x:1.4,y:322.35},0).wait(5).to({scaleX:0.7703,scaleY:0.5516,rotation:4.4739,x:-1.5,y:325.35},0).wait(5).to({scaleX:0.7805,scaleY:0.5589,rotation:0.4818,x:-10.35,y:340},0).wait(1).to({rotation:0.4818},0).wait(5).to({scaleX:0.8411,scaleY:0.6023,rotation:0.4805,x:-21.25,y:333},0).wait(13));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(5).to({scaleX:1.0406,scaleY:0.8722,x:-9,y:427},0).wait(5).to({scaleX:1.0977,scaleY:0.92,x:-20,y:428},0).wait(5).to({scaleX:1.0195,scaleY:0.8545,x:-5,y:439},0).wait(5).to({scaleX:0.9777,scaleY:0.8194,x:3,y:445},0).wait(5).to({scaleX:1.0457,scaleY:0.8764,x:-10,y:435},0).wait(7));
 
 	// homme_blessé
 	this.instance_1 = new lib.hommeblessé();
-	this.instance_1.setTransform(420,119,0.7251,0.6077);
+	this.instance_1.setTransform(551,151,1.0207,0.8555);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(5).to({scaleX:0.7372,scaleY:0.6179,x:418,y:117},0).wait(5).to({scaleX:0.7596,scaleY:0.6367,x:415,y:114},0).wait(5).to({scaleX:0.8452,scaleY:0.7084,x:408,y:101},0).wait(6).to({scaleX:0.7647,scaleY:0.6269,x:417,y:116},0).wait(6).to({scaleX:0.7212,scaleY:0.5912,x:421,y:123},0).wait(7));
-
-	// homme_a_cote___couple
-	this.instance_2 = new lib.hommeacotecouple();
-	this.instance_2.setTransform(8,189,0.7251,0.6077);
-
-	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(5).to({scaleX:0.7742,scaleY:0.6489,x:-7,y:181},0).wait(5).to({scaleX:0.824,scaleY:0.6921,x:-17,y:173},0).wait(5).to({scaleY:0.7298,y:166},0).wait(6).to({scaleX:0.7553,scaleY:0.669,x:-7,y:178},0).wait(13));
-
-	// homme_orilla
-	this.instance_3 = new lib.hommeorilla();
-	this.instance_3.setTransform(8,30,0.7251,0.6077);
-
-	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(5).to({scaleX:0.7661,scaleY:0.6421,x:0,y:21},0).wait(5).to({scaleX:0.803,scaleY:0.673,x:-6,y:13},0).wait(5).to({scaleX:0.8162,scaleY:0.6841,x:-8,y:10},0).wait(6).to({scaleX:0.8001,scaleY:0.6706,x:-5,y:14},0).wait(6).to({scaleX:0.7561,scaleY:0.6338,x:2,y:24},0).wait(7));
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(5).to({scaleX:1.1409,scaleY:0.9562,x:541,y:132},0).wait(5).to({scaleX:1.1839,scaleY:0.9923,x:535,y:125},0).wait(5).to({scaleX:1.0979,scaleY:0.9202,x:548,y:138},0).wait(5).to({scaleX:1.0194,scaleY:0.8544,x:549,y:150},0).wait(5).to({scaleX:1.1026,scaleY:0.9241,x:545,y:137},0).wait(7));
 
 	// couple
-	this.instance_4 = new lib.couple();
-	this.instance_4.setTransform(140,18,0.7251,0.6077);
+	this.instance_2 = new lib.couple();
+	this.instance_2.setTransform(172,23,0.988,0.8281);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(5).to({scaleX:0.7642,scaleY:0.6405,x:131,y:6},0).wait(5).to({scaleX:0.8027,scaleY:0.6728,x:122,y:-5},0).wait(5).to({scaleX:0.8303,scaleY:0.6959,x:106,y:-23},0).wait(6).to({scaleX:0.7695,scaleY:0.645,x:120,y:-5},0).wait(6).to({scaleX:0.7338,scaleY:0.6151,x:128,y:6},0).wait(7));
+	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(5).to({scaleX:1.0658,scaleY:0.8933,x:154,y:0},0).wait(5).to({scaleX:1.1171,scaleY:0.9362,x:142,y:-15},0).wait(5).to({scaleX:1.0529,scaleY:0.8824,x:157,y:4},0).wait(5).to({scaleX:0.9945,scaleY:0.8335,x:171,y:21},0).wait(5).to({scaleX:1.0289,scaleY:0.8623,x:163,y:11},0).wait(7));
+
+	// homme_a_cote___couple
+	this.instance_3 = new lib.hommeacotecouple();
+	this.instance_3.setTransform(5,253,0.9455,0.7925);
+
+	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(5).to({scaleX:1.0114,scaleY:0.8477,x:-8,y:243},0).wait(5).to({scaleX:1.1146,scaleY:0.9342,x:-28,y:227},0).wait(5).to({scaleX:1.0511,scaleY:0.8809,x:-16,y:237},0).wait(5).to({scaleX:0.9873,scaleY:0.8275,x:-3,y:247},0).wait(5).to({scaleX:1.0472,scaleY:0.8777,x:-15,y:237},0).wait(7));
+
+	// homme_orilla
+	this.instance_4 = new lib.hommeorilla();
+	this.instance_4.setTransform(0,36,0.9455,0.8209);
+
+	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(5).to({scaleX:1.0024,scaleY:0.8703,y:23},0).wait(5).to({scaleX:1.0591,scaleY:0.9195,y:9},0).wait(5).to({scaleX:0.9928,scaleY:0.8619,y:25},0).wait(5).to({scaleX:0.9351,scaleY:0.8118,y:39},0).wait(5).to({scaleX:0.9928,scaleY:0.8619,y:26},0).wait(7));
 
 	// Homme__Drapeau
 	this.instance_5 = new lib.HommeDrapeau();
-	this.instance_5.setTransform(0,307,0.7389,0.6193);
+	this.instance_5.setTransform(-5,404,0.9853,0.8258);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(5).to({scaleY:0.6466,y:299},0).wait(5).to({scaleX:0.7524,scaleY:0.6584,x:-6,y:296},0).wait(5).to({scaleX:0.7665,scaleY:0.6708,x:-12,y:292},0).wait(6).to({scaleX:0.7293,scaleY:0.6382,x:3,y:301},0).wait(13));
+	this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(5).to({scaleX:0.997,x:-10},0).wait(5).to({scaleX:1.0276,x:-33},0).wait(5).to({scaleX:0.9908,x:-16},0).wait(5).to({scaleX:0.9663,scaleY:0.8054,x:3,y:410},0).wait(5).to({scaleX:1.0029,scaleY:0.8359,x:-12,y:401},0).wait(7));
 
 	// com
 	this.instance_6 = new lib.com_1();
-	this.instance_6.setTransform(0,0,0.7375,0.6132);
+	this.instance_6.setTransform(0,0,0.9766,0.8119);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_6).wait(34));
+	this.timeline.addTween(cjs.Tween.get(this.instance_6).wait(32));
 
 	this._renderFirstFrame();
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(339.5,307.5,385.5,368.20000000000005);
+p.nominalBounds = new cjs.Rectangle(447,423,513,456.20000000000005);
 // library properties:
 lib.properties = {
 	id: 'CEC8651DAB923D45BE632E16982CCE9F',
-	width: 725,
-	height: 661,
+	width: 960,
+	height: 876,
 	fps: 24,
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/com_atlas_.png?1583834528040", id:"com_atlas_"}
+		{src:"images/com_atlas_.png?1583928258795", id:"com_atlas_"}
 	],
 	preloads: []
 };
