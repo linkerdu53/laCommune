@@ -25,12 +25,22 @@ body
     background-size: 400% 400%;
 }
 .index_presentation {
-  padding-top: 22%;
+  padding-top: 5%;
    color: white;
    text-align: center;
    font-size: 30px;
    margin-top: 10px;
  }
+.centrer {
+  position: absolute;
+  margin-top: 50px;
+  left: 35%;
+
+  }
+.imgAcc{
+    width: 30%;
+    height: auto;
+  }
  footer{
    bottom: 0px;
    text-align: right;
