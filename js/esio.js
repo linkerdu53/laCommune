@@ -12,11 +12,21 @@ var canvas, ctx, source, context, analyser, fbc_array, bars, bar_x, bar_width, b
 var lance = document.querySelector('#lance');
 var zone = document.querySelector('#analyser_render');
 zone.style.display = "none";
-document.querySelector('#lance').addEventListener('click', function() {
-  //enleve le bouton après avoir cliquer dessus
 
-  lance.style.display = "none";
-  zone.style.display = "";
+
+/*
+document.querySelector('#lance').addEventListener('click', function() {
+
+  $defil.addClass('defilementVertical');
+  $defil.addClass('playDefil');
+  $defil.addClass('arretDefil');
+
+  //enleve le bouton après avoir cliquer dessus
+  btnLecturePause.html('Pause');
+
+  //btnLecturePause.style.display = "";
+  //lance.style.display = "none";
+  /*zone.style.display = "";
   audio.play();
   document.getElementById('audio_box').appendChild(audio);
 	context = new AudioContext(); // AudioContext object instance
@@ -29,9 +39,9 @@ document.querySelector('#lance').addEventListener('click', function() {
 	analyser.connect(context.destination);
 	frameLooper();
 });
+*/
 
 // frameLooper() audio fréquence
-// créaation des frames à 60 fps
 function frameLooper(){
 	window.requestAnimationFrame(frameLooper);
 	fbc_array = new Uint8Array(analyser.frequencyBinCount);
