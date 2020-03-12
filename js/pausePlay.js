@@ -4,21 +4,19 @@ $('.toggleButton:eq(0)').on('click', function() {
     $defil.addClass('defilementVertical');
     $defil.addClass('playDefil');
     $defil.addClass('arretDefil');
-
 // lecture du spectrogramme
     zone.style.display = "";
     audio.play();
     document.getElementById('audio_box').appendChild(audio);
-  	context = new AudioContext(); // AudioContext object instance
-  	analyser = context.createAnalyser(); // AnalyserNode method
+  	context = new AudioContext();
+  	analyser = context.createAnalyser();
   	canvas = document.getElementById('analyser_render');
   	ctx = canvas.getContext('2d');
-  	// graph
+// graph
   	source = context.createMediaElementSource(audio);
   	source.connect(analyser);
   	analyser.connect(context.destination);
   	frameLooper();
-
 
   if($(this).html() === 'Lecture')
   {
@@ -31,6 +29,5 @@ $('.toggleButton:eq(0)').on('click', function() {
     $defil.removeClass('playDefil');
     $defil.addClass('arretDefil');
     audio.pause();
-
   }
 });

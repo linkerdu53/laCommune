@@ -1,13 +1,11 @@
 div#mp3_player{
   width:400px;
   height:100px;
-  /*background:#000;*/
   padding:5px;
   margin:-50px auto;
  }
 div#mp3_player > div > audio{
   width:500px;
-  /*background:#000;*/
   float:left;
 }
 div#mp3_player > canvas{
@@ -15,7 +13,6 @@ div#mp3_player > canvas{
   height:50px;
   background:rgba(0,0,0,0.5);
   float:left;
-
 }
 div#audio_box{
   display: none;
@@ -35,7 +32,6 @@ button#lance{
 body{
   background-color: #222222;
 }
-
 .containerDefil {
     width: 20em;
     height: 10em;
@@ -45,22 +41,20 @@ body{
     position: relative;
     box-sizing: border-box;
 }
-
 .marquee {
     top: 6em;
     position: relative;
     box-sizing: border-box;
 }
-  .defilementVertical{
+.defilementVertical{
     animation: animVert 70s linear /*infinite*/;
-  }
-  .arretDefil{
+}
+.arretDefil{
     animation-play-state: paused;
-  }
-  .playDefil{
+}
+.playDefil{
     animation-play-state: running;
-  }
-
+}
 @keyframes animVert {
     0%   { top:   8em }
     100% { top: -11em }

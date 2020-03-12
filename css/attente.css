@@ -17,8 +17,7 @@ animation: AnimationAttente 0s ease infinite;
     50%{background-position:100% 50%}
     100%{background-position:0% 51%}
 }
-body
-{
+body{
     -webkit-animation: AnimationAttente 30s; /* Safari, Opera, Chrome */
     animation: AnimationAttente 30s;
     background: linear-gradient(89deg, #a10400, #1a056f);
@@ -32,7 +31,7 @@ body
    margin-top: 10px;
  }
 .centrer {
-  position: absolute;
+  position: relative;
   margin-top: 50px;
   left: 35%;
 
@@ -41,7 +40,7 @@ body
     width: 30%;
     height: auto;
   }
- footer{
+footer{
    bottom: 0px;
    text-align: right;
    position: absolute;
@@ -50,9 +49,27 @@ body
    padding-right:2%;
    padding-bottom: 1%;
  }
- .lienTel{
+.lienTel{
    color: white;
  }
- .lienTel:hover{
+.lienTel:hover{
    color: white;
+ }
+.texteIndex{
+   color: white;
+   text-align: center;
+   margin-top: 10px;
+
+ }
+.btnVerSite{
+   margin-left: 50px;
+   border-radius: 50px;
+   font-size: 14px;
+   text-align: center;
+   display: block;
+   margin: 20px auto;
+   width: 200px;
+   padding: 1em 2em;
+   color: #4d4d4d;
+   background-color: #F0F0F0;
  }
